@@ -1,29 +1,30 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-/*
- * main - multiply two numbers received
- * @argc: argument counter
- * @argv: array of recieved argument
+/**
+ * main - Multiply two numbers provided as command-line arguments
  *
- * Return: 0 on success and 1 on error
+ * @argc: Number of command-line arguments
+ * @argv: Array of command-line arguments
+ *
+ * Return: 0 if successful, 1 otherwise
  */
-
 int main(int argc, char *argv[])
 {
-	int product, k, p;
+	int k, p, product;
 
 	if (argc != 3)
 	{
-		printf("Error\n");
-		return (1);
+	printf("Error\n");
+	return (1);
 	}
 
-	k = _atoi(argv[1]);
-	p = _atoi(argv[2]);
+	k = atoi(argv[1]);
+	p = atoi(argv[2]);
 	product = k * p;
 
-	printf("%d\n", result);
+	printf("%d\n", product);
 
 	return (0);
 }
